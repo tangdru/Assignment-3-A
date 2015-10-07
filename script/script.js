@@ -46,9 +46,12 @@ console.log(symbols);
 //With the array you've created and populated, draw circles to represent these symbols
 symbols.forEach(function(trial,index){
 		console.log("newSy", newSymbols,"trial: ", trial,"i", index);
-	onrandom = Math.random();
+	onrandom1 = Math.random();
 	onrandom2 = Math.random();
-	if(trial <.50) {
+	onrandom3 = Math.random();
+	onrandom4 = Math.random();
+
+	if(trial <.60) {
 		plot
 			.append('circle')
 			.attr('cx', Math.random() * width)
@@ -59,10 +62,10 @@ symbols.forEach(function(trial,index){
 	else {
 		plot
 		.append('rect')
-		.attr('x',onrandom * (width-onrandom2*height))
-		.attr('y',onrandom2 * (height-onrandom*height))
-		.attr('width',onrandom*width/6)
-		.attr('height',onrandom2*height)
+		.attr('x',onrandom1 * (width-onrandom3*height))
+		.attr('y',onrandom2 * (onrandom4*height))
+		.attr('width',onrandom1*width/6)
+		.attr('height',onrandom3*height/2)
 		.style('fill','rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')')
 
 }})
