@@ -54,18 +54,18 @@ symbols.forEach(function(trial,index){
 	if(trial <.60) {
 		plot
 			.append('circle')
-			.attr('cx', Math.random() * width)
-			.attr('cy', Math.random() * height)
-			.attr('r', 50 * Math.random())
+			.attr('cx', onrandom1 * width)
+			.attr('cy', onrandom3 * height)
+			.attr('r', 50 * onrandom2)
 			.style('fill', 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')')
 	}
 	else {
 		plot
 		.append('rect')
-		.attr('x',onrandom1 * (width-onrandom3*height))
-		.attr('y',onrandom2 * (onrandom4*height))
+		.attr('x',onrandom4 * (width-onrandom3*height))
+		.attr('y',onrandom2 * (onrandom1*height))
 		.attr('width',onrandom1*width/6)
-		.attr('height',onrandom3*height/2)
+		.attr('height',onrandom4*height/2)
 		.style('fill','rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')')
 
 }})
